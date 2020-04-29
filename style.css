@@ -1,0 +1,226 @@
+/*  tags  */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+}
+
+body {
+    height: 6747px;
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+
+section {
+    padding: 100px 15% 100px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+h1, h3, h4 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font: normal 20px Roboto Slab, Serif;
+    text-transform: capitalize;
+}
+
+p {
+    font: 14px "Roboto Slab", Serif;
+    line-height: 24px;
+    color: #555555;
+}
+
+
+/*  classes   */
+
+.flex-1 {
+    flex: 1;
+}
+
+.btn {
+    height: 44px;
+    width: 174px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid white;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 70px;
+}
+.section__header > hr {
+    width: 50px;
+    height: 2px;
+    background-color: #555555;
+    box-shadow: none;
+    border: none;
+    margin: 30px;
+}
+
+
+/*  IDs and sections   */
+
+section#home {
+    height: 770px;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    background: url("img/Home-Background.png");
+
+    color: white;
+}
+
+
+#topnav {
+    position: relative;
+    padding-top: 40px;
+}
+
+#logo {
+
+}
+
+#topnav > ul {
+    position: absolute;
+    right: 0;
+    display: inline;
+}
+#topnav > ul > li {
+    display: inline;
+    margin-left: 34px;
+}
+#topnav > ul > li > a {
+    text-decoration: none;
+}
+
+
+#home__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home__content > h2 {
+    padding-top: 23px;
+    padding-bottom: 48px;
+}
+
+
+
+
+
+
+section#services {
+
+}
+
+#services__content {
+    display: flex;
+}
+
+#services__content > div {
+    flex: 1 250px;
+    text-align: center;
+}
+#services__content > div:not(:last-child) {
+    margin-right: 30px;
+}
+#services__content > div > h4 {
+    margin-bottom: 23px;
+    margin-top: 27px;
+}
+
+
+
+
+
+section#about {
+    background: #f8f8f8;
+}
+
+#about__content > div:first-child {
+    display: flex;
+}
+#about__content > div:first-child > p {
+    flex: 1;
+}
+#about__content > div:first-child > p:first-child {
+    margin-right: 30px;
+}
+
+
+#team {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 60px;
+}
+
+.employee {
+    flex: 8;
+    text-align: center;
+}
+.separator {
+    flex: 1;
+}
+.employee img {
+    width: 15.7vw;
+    height: 15vw;
+}
+
+
+
+
+section#works {
+
+}
+
+#works__navbar {
+
+}
+
+#works__navbar > li {
+    display: inline;
+    font: 16px "Roboto Slab", sans-serif;
+}
+#works__navbar > li:not(:last-child) {
+    margin-right: 20px;
+}
+#works__navbar > li:first-child, #works__navbar > li:hover {
+    color: #c0301c;
+}
+
+
+#works__content {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 360px);
+    justify-content: space-around;
+}
+
+
+
+
