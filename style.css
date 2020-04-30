@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 body {
@@ -58,6 +58,8 @@ p {
     border: 2px solid white;
     border-radius: 2px;
     text-transform: uppercase;
+
+    font: 18px "Roboto Slab", sans-serif;
 }
 
 .section__header {
@@ -224,3 +226,26 @@ section#works {
 
 
 
+section#parallax {
+    height: 368px;
+    box-sizing: border-box;
+
+    background: url("img/Paralax-section.png") center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+}
+
+section#parallax > p {
+    font-size: 30px;
+
+    line-height: 44px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    color: white;
+}
