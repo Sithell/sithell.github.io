@@ -437,6 +437,12 @@ section#contact > div:last-child {
     grid-column: 2 / -1;
     display: flex;
     align-items: center;
+
+    font: 12px "Roboto Slab", serif;
+    color: #555555;
+}
+#contact form > span > span {
+    color: #c0301c;
 }
 
 #contact input {
@@ -450,7 +456,7 @@ section#contact > div:last-child {
     border: 1px solid #555555;
 }
 
-#contact input::placeholder, textarea::placeholder {
+#contact input::placeholder, textarea::placeholder, #contact input {
     font: 12px "Roboto Slab", serif;
     color: #555555;
     text-transform: uppercase;
@@ -459,4 +465,22 @@ section#contact > div:last-child {
 #contact input:focus, #contact textarea:focus, #contact input:hover, #contact textarea:focus {
     outline: none;
     border-color: #c0301c;
+}
+
+
+
+#contact__info > * {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 17px;
+    grid-row-gap: 12px;
+    margin-bottom: 35px;
+}
+#contact__info > * p {
+    grid-column: 2 / -1;
+}
+#contact__info > * h4 {
+    color: #555555;
+    font-weight: 500;
 }
