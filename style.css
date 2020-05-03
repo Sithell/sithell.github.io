@@ -46,6 +46,12 @@ hr {
     border: none;
 }
 
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline-block;
+}
 
 
 /*  classes   */
@@ -93,7 +99,8 @@ section#home {
     padding-top: 0;
     padding-bottom: 0;
 
-    background: url("img/Home-Background.png");
+    background: url("img/Home-Background.png") no-repeat;
+    background-size: cover;
 
     color: white;
 }
@@ -335,4 +342,57 @@ article > a {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #c0301c;
+}
+
+
+
+
+
+section#clients {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#clients ul {
+    display: flex;
+    justify-content: center;
+}
+section#clients li {
+    margin: 0 30px;
+}
+
+section#clients li:nth-child(1) img {
+    margin-top: 11px;
+}
+section#clients li:nth-child(2) img {
+    margin-top: 0;
+}
+section#clients li:nth-child(3) img {
+    margin-top: 14px;
+}
+section#clients li:nth-child(4) img {
+    margin-top: 11px;
+}
+section#clients li:nth-child(5) img {
+    margin-top: 1px;
+}
+
+section#clients p {
+    max-width: 764px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+section#clients span {
+    font: 20px "Roboto Slab", sans-serif;
+    color: #555555;
+}
+
+section#clients img {
+    margin-top: 40px;
 }
