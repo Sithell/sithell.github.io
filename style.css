@@ -82,7 +82,14 @@ li {
     border-radius: 2px;
     text-transform: uppercase;
 
+    background-color: rgba(0, 0, 0, 0);
+
     font: 18px "Roboto Slab", sans-serif;
+}
+.btn:hover, input[type=submit]:hover {
+    background-color: white;
+    color: #c0301c;
+    cursor: pointer;
 }
 
 .section__header {
@@ -92,12 +99,18 @@ li {
 
     margin-bottom: 70px;
 }
+.section__header * {
+    text-align: center;
+}
 .section__header > hr {
     width: 50px;
     background-color: #555555;
     margin: 30px;
 }
 
+.input-field {
+
+}
 
 /*  IDs and sections   */
 
@@ -211,12 +224,13 @@ section#about {
     flex: 8;
     text-align: center;
 }
-.separator {
-    flex: 1;
-}
 .employee img {
     width: 15.7vw;
     height: 15vw;
+}
+.employee h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -450,9 +464,7 @@ section#contact > div:last-child {
 #message {
     grid-column: 1 / -1;
 }
-#contact input[type=submit] {
-    background-color: white;
-}
+
 #contact form > span {
     grid-column: 2 / -1;
     display: flex;
@@ -467,24 +479,31 @@ section#contact > div:last-child {
 
 #contact input {
     height: 42px;
-    border: 1px solid #555555;
     padding: 0 14px;
 }
 #contact textarea {
     padding: 14px;
     min-height: 100px;
-    border: 1px solid #555555;
 }
 
-#contact input::placeholder, textarea::placeholder, #contact input {
+.input-field, input[type=submit] {
+    border: 1px solid #555555;
+    border-radius: 0;
     font: 12px "Roboto Slab", serif;
     color: #555555;
+}
+.input-field::placeholder {
     text-transform: uppercase;
 }
 
-#contact input:focus, #contact textarea:focus, #contact input:hover, #contact textarea:focus {
+.input-field:focus, .input-field:hover {
     outline: none;
     border-color: #c0301c;
+}
+input[type=submit]:hover {
+    background-color: #c0301c;
+    border: none;
+    color: white;
 }
 
 
