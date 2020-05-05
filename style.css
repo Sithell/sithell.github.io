@@ -277,8 +277,8 @@ section#parallax {
     height: 368px;
     box-sizing: border-box;
 
-    background: url("img/Paralax-section.png") center no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
+    background: url("img/Paralax-section.png") no-repeat;
 
     display: flex;
     flex-direction: column;
@@ -364,6 +364,10 @@ article img {
     margin-top: 10px;
     font: 16px Montserrat, sans-serif;
     font-weight: 500;
+}
+.article__header h4:hover {
+    color: #c0301c;
+    cursor: pointer;
 }
 
 .article__header span {

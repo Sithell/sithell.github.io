@@ -7,7 +7,7 @@ function offset(el) {
 
 function parallaxEffect(element, power, initial) {
     // the less power - the stronger effect
-    element.style.backgroundPositionY = (window.pageYOffset * power) - (offset(element).top * power) + initial + 'px';
+    element.style.backgroundPositionY = (window.pageYOffset - offset(element).top) * power + initial + 'px';
 }
 
 function setupParallax(element, power, initial) {
