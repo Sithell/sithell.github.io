@@ -231,11 +231,18 @@ section#works {
 
 #works__content {
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, 360px);
+    grid-column-gap: 30px;
+    grid-row-gap: 26px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     justify-content: space-around;
 }
 
+#works__content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
