@@ -12,7 +12,7 @@ function parallaxEffect(element, power, initial) {
 
 function setupParallax(element, power, initial) {
     parallaxEffect(element, power);
-    window.addEventListener('scroll', function (e) {
+    window.addEventListener('scroll', function () {
         parallaxEffect(element, power, initial);
     });
 }
