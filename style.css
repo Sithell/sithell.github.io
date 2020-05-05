@@ -250,7 +250,7 @@ section#parallax {
     height: 368px;
     box-sizing: border-box;
 
-    background: url("img/Paralax-section.png") center;
+    background: url("img/Paralax-section.png") center no-repeat;
     background-size: cover;
 
     display: flex;
@@ -260,6 +260,7 @@ section#parallax {
     color: white;
 }
 section#parallax > p {
+
     font-size: 30px;
 
     line-height: 44px;
