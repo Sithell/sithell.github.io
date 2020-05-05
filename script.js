@@ -18,3 +18,16 @@ function setupParallax(element, power, initial) {
 }
 // set initial background position
 setupParallax(document.getElementById('parallax'), 0.5, -400);
+setupParallax(document.getElementById('home'), 0.5, 0);
+
+
+
+function hover(image) {
+    let filename = image.getAttribute('src');
+    image.setAttribute('src', (filename.slice(0, -4)) + '-hover.png');
+}
+
+function unhover(image) {
+    let filename = image.getAttribute('src');
+    image.setAttribute('src', (filename.slice(0, -10)) + '.png');
+}
