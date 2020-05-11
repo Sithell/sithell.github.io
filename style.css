@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    /*outline: 1px solid red;*/
+    outline: 1px solid red;
 }
 
 body {
@@ -214,20 +214,51 @@ section#about {
 }
 
 
-#team {
-    display: flex;
-    justify-content: space-between;
 
-    padding-top: 60px;
+
+#team {
+    margin-top: 60px;
 }
 
+#team ul {
+    white-space: nowrap;
+    display: flex;
+    transition: margin-left 250ms;
+}
+#team li {
+    margin-right: calc((70vw - 263px * 4) / 3);
+    display: inline-block;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    top: 106px;
+    width: 35px;
+    height: 38px;
+    background: #c0301c;
+    color: white;
+    border: none;
+}
+
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+
 .employee {
-    flex: 8;
     text-align: center;
 }
 .employee img {
-    width: 15.7vw;
-    height: 15vw;
+    /*width: 15.7vw;*/
+    /*height: 15vw;*/
 }
 .employee h4 {
     margin-top: 15px;

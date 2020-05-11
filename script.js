@@ -31,3 +31,28 @@ function unhover(image) {
     let filename = image.getAttribute('src');
     image.setAttribute('src', (filename.slice(0, -10)) + '.png');
 }
+
+
+
+let list = document.querySelector(".gallery ul");
+let listElems = document.querySelectorAll(".gallery li");
+console.log(listElems);
+let position = 0;
+let width = 263 + (0.7 * window.innerWidth - 263 * 4) / 3;
+let count = 1; // видимое количество изображений
+document.querySelector('.prev').onclick = function () {
+    // сдвиг влево
+    position += width * count;
+    // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
+    position = Math.min(position, 0)
+    list.style.marginLeft = position + 'px';
+}
+
+document.querySelector('.next').onclick = function () {
+    console.log("next");
+    // сдвиг вправо
+    position -= width * count;
+    // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
+    position = Math.max(position, -width * (listElems.length - 4));
+    list.style.marginLeft = position + 'px';
+}
