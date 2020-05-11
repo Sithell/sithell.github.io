@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 body {
@@ -51,7 +51,9 @@ ul {
 li {
     display: inline-block;
 }
-
+button:focus {
+    outline: none;
+}
 /*  classes   */
 
 .flex-1 {
@@ -240,9 +242,17 @@ section#about {
     top: 106px;
     width: 35px;
     height: 38px;
-    background: #c0301c;
-    color: white;
+    background: #555555;
+    opacity: 20%;
+    color:#dddddd;
     border: none;
+}
+.arrow:hover {
+    opacity: 50%;
+}
+.arrow:active {
+    background-color: #c0301c;
+    opacity: 100%;
 }
 
 .prev {
