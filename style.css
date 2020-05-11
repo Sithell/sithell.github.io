@@ -85,7 +85,7 @@ button:focus {
     text-transform: uppercase;
 
     background-color: rgba(0, 0, 0, 0);
-
+    transition: background-color 200ms, color 200ms;
     font: 18px "Roboto Slab", sans-serif;
 }
 .btn:hover, input[type=submit]:hover {
@@ -113,6 +113,21 @@ button:focus {
 .input-field {
 
 }
+
+.round-icon {
+    border-radius: 100vw;
+    color: #c0301c;
+    transition: background-color 200ms, color 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-icon:hover {
+    background-color: #c0301c;
+    color: white;
+}
+
 
 /*  IDs and sections   */
 
@@ -184,7 +199,9 @@ section#services {
 
 #services__content > div {
     flex: 1 250px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #services__content > div:not(:last-child) {
     margin-right: 30px;
@@ -193,9 +210,16 @@ section#services {
     margin-bottom: 23px;
     margin-top: 27px;
 }
-#services__content img:hover {
-
+#services__content p {
+    text-align: center;
 }
+#services__content .round-icon {
+    width: 90px;
+    height: 90px;
+    font-size: 48px;
+    border: 2px solid #dddddd;
+}
+
 
 
 
@@ -624,7 +648,9 @@ input[type=submit]:hover {
     color: white;
 }
 
-
+input[type=submit] {
+    transition: background-color 200ms, color 200ms;
+}
 
 #contact__info > * {
     display: grid;
@@ -655,13 +681,25 @@ footer {
     text-align: center;
 }
 
-footer img {
-    display: inline;
+footer .round-icon {
+    display: inline-flex;
     margin: 7px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    font-size: 16px;
+    background-color: #c0301c;
+    color: white;
 }
+footer .round-icon:hover {
+    background-color: white;
+    color: #c0301c;
+}
+
 footer hr {
     width: 50px;
     height: 2px;
     background-color: white;
     margin: 30px auto;
+
 }
