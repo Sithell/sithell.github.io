@@ -21,38 +21,25 @@ setupParallax(document.getElementById('parallax'), 0.5, -400);
 setupParallax(document.getElementById('home'), 0.5, 0);
 
 
-
-function hover(image) {
-    let filename = image.getAttribute('src');
-    image.setAttribute('src', (filename.slice(0, -4)) + '-hover.png');
-}
-
-function unhover(image) {
-    let filename = image.getAttribute('src');
-    image.setAttribute('src', (filename.slice(0, -10)) + '.png');
-}
-
-
-
 let list = document.querySelector(".gallery ul");
+list.style.marginLeft = 0;
 let listElems = document.querySelectorAll(".gallery li");
-console.log(listElems);
 let position = 0;
-let width = 263 + (0.7 * window.innerWidth - 263 * 4) / 3;
-let count = 1; // видимое количество изображений
+
+let count = 4; // видимое количество изображений
+
 document.querySelector('.prev').onclick = function () {
-    // сдвиг влево
-    position += width * count;
-    // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-    position = Math.min(position, 0)
-    list.style.marginLeft = position + 'px';
+    if (position > 0) {
+        let offset = listElems[position + 1].offsetLeft - listElems[position].offsetLeft;
+        position -= 1;
+        list.style.marginLeft = position * -offset + "px"
+    }
 }
 
 document.querySelector('.next').onclick = function () {
-    console.log("next");
-    // сдвиг вправо
-    position -= width * count;
-    // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-    position = Math.max(position, -width * (listElems.length - 4));
-    list.style.marginLeft = position + 'px';
+    if (position < listElems.length - count) {
+        let offset = listElems[position + 1].offsetLeft - listElems[position].offsetLeft;
+        position += 1;
+        list.style.marginLeft = position * -offset + "px"
+    }
 }
