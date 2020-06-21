@@ -348,6 +348,12 @@ section#about {
     background-color: #c0301c;
 }
 
+
+@media (max-width: 1560px) {
+    #team li {
+        margin-right: calc((70vw - 263px * 3) / 2);
+    }
+}
 section#works {
 
 }
