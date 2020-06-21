@@ -30,16 +30,16 @@ let count = 4; // видимое количество изображений
 
 document.querySelector('.prev').onclick = function () {
     if (position > 0) {
-        let offset = listElems[position + 1].offsetLeft - listElems[position].offsetLeft;
+        let offset = listElems[position - 1].getBoundingClientRect().left - list.getBoundingClientRect().left;
         position -= 1;
-        list.style.marginLeft = position * -offset + "px"
+        list.style.marginLeft = -offset + "px"
     }
 }
 
 document.querySelector('.next').onclick = function () {
     if (position < listElems.length - count) {
-        let offset = listElems[position + 1].offsetLeft - listElems[position].offsetLeft;
+        let offset = listElems[position + 1].getBoundingClientRect().left - list.getBoundingClientRect().left;
         position += 1;
-        list.style.marginLeft = position * -offset + "px"
+        list.style.marginLeft = -offset + "px"
     }
 }
