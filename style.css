@@ -389,8 +389,9 @@ section#works {
     object-fit: cover;
 }
 
-
-
+#works__content img:hover {
+    transform: scale(1.1, 1.1);
+}
 section#parallax {
     height: 368px;
     box-sizing: border-box;
